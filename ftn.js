@@ -94,7 +94,7 @@
             } else {
                 timer.textContent = minutes + ':0' + seconds;
             }
-        }, 10);
+        }, 1000);
     }
 
     function showGameOver() {
