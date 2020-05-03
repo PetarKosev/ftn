@@ -61,7 +61,16 @@
             !flag
         ) {
             clickedElement.textContent = '';
+
+            if (currentNumber === 100) {
+                clearInterval(interval);
+                showWon();
+                flag = true;
+                return;
+            }
+
             currentNumber++;
+            
         }
     });
 
@@ -81,7 +90,7 @@
     
                 return;
             }
-    
+
             if (seconds === 0) {
                 minutes--;
                 seconds = 60;
@@ -119,6 +128,31 @@
         
         gameOverStatement.appendChild(restartButton);
         backdrop.appendChild(gameOverStatement);
+        mainTable.appendChild(backdrop);
+    }
+
+    function showWon() {
+        var mainTable = document.querySelector('.table');
+        var backdrop = document.createElement('div');
+        var gameWonStatement = document.createElement('div');
+        var restartButton = document.createElement('button');
+
+        restartButton.onclick = function() {
+            backdrop.parentNode.removeChild(backdrop);
+
+            resetGame();
+        };
+
+        restartButton.className = 'restart-button';
+        restartButton.textContent = 'Play Again';
+
+        gameWonStatement.textContent = 'GAME WON';
+        gameWonStatement.className = 'game-won';
+
+        backdrop.className = 'backdrop';
+        
+        gameWonStatement.appendChild(restartButton);
+        backdrop.appendChild(gameWonStatement);
         mainTable.appendChild(backdrop);
     }
 
