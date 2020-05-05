@@ -85,8 +85,8 @@ td {
     line-height: 5rem;
     background: #4caf50;
     font-size: 3rem;
-    color: white;
-    text-shadow: 0 1px 2px black;
+    color: black;
+    text-shadow: 0 1px 2px #ffffff;
     letter-spacing: 1rem;
     display: flex;
     align-items: center;

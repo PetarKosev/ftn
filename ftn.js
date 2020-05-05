@@ -103,7 +103,7 @@
             } else {
                 timer.textContent = minutes + ':0' + seconds;
             }
-        }, 1000);
+        }, 10);
     }
 
     function showGameOver() {
@@ -171,6 +171,7 @@
 
         drawNumbers();
         drawTimer();
+        flag = false;
     }
 
     drawNumbers();
