@@ -5,6 +5,10 @@ body,
     height: 100%;
 }
 
+html {
+    font-size: 16px;
+}
+
 body {
     margin: 0;
     font-family: sans-serif;
@@ -17,10 +21,11 @@ button {
 }
 
 .table {
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; */
+    text-align: center;
 }
 
 .table .timer {
@@ -32,9 +37,11 @@ button {
 .table table {
     border-spacing: 0;
     border-collapse: collapse;
+    margin: 0 auto;
 }
 
 td {
+    min-width: 4rem;
     width: 4rem;
     height: 4rem;
     text-align: center;
@@ -117,8 +124,7 @@ td {
 .new-game-button {
     margin-top: 1rem;
     border: 0;
-    height: 3rem;
-    padding: 0 1.5rem;
+    padding: .75rem 1.5rem;
     /* background-color: #bebebe; */
     cursor: pointer;
     font-size: 1.5rem;
@@ -144,5 +150,25 @@ td {
 
     to {
         transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    html {
+        font-size: 8px;
+    }
+
+    td {
+        font-size: 2.25rem;
+    }
+
+    .table .timer {
+        font-size: 5.5rem;
+    }
+
+    .new-game-button {
+        font-size: 3.5rem;
+        width: calc(100% - 2rem);
+        margin: 1rem;
     }
 }
