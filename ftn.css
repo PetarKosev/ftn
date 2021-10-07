@@ -20,6 +20,15 @@ button {
     font-family: inherit;
 }
 
+.js-current-number {
+    color: white;
+    font-size: 4rem;
+    border: solid;
+    text-align: center;
+    width: 50vw;
+    margin: 1rem auto 0 auto;
+}
+
 .table {
     /* display: flex;
     align-items: center;
@@ -29,6 +38,7 @@ button {
 }
 
 .table .timer {
+    margin-top: 1rem;               /*TODO*/
     margin-bottom: 1rem;
     font-size: 3rem;
     color: #ffffff;
